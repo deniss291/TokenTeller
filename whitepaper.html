@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokenTeller - Whitepaper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="whitepaper.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="TokenTeller Eagle Logo" class="logo-img">
+                <span class="logo-text">TokenTeller</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Whitepaper Hero -->
+    <section class="whitepaper-hero">
+        <div class="container">
+            <h1 class="whitepaper-title">TokenTeller Whitepaper</h1>
+            <p class="whitepaper-subtitle">AI-Powered Cryptocurrency Token Analysis</p>
+            <div class="whitepaper-meta">
+                <span>Version 1.0</span>
+                <span>•</span>
+                <span>November 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="toc-section">
+        <div class="container">
+            <div class="toc-container">
+                <h2 class="toc-title">Table of Contents</h2>
+                <nav class="toc">
+                    <a href="#abstract" class="toc-item">1. Abstract</a>
+                    <a href="#introduction" class="toc-item">2. Introduction</a>
+                    <a href="#problem" class="toc-item">3. The Problem</a>
+                    <a href="#solution" class="toc-item">4. Our Solution</a>
+                    <a href="#architecture" class="toc-item">5. Technical Architecture</a>
+                    <a href="#analysis" class="toc-item">6. Analysis Framework</a>
+                    <a href="#ai" class="toc-item">7. AI Integration</a>
+                    <a href="#protocol" class="toc-item">8. Virtuals Protocol Integration</a>
+                    <a href="#use-cases" class="toc-item">9. Use Cases</a>
+                    <a href="#roadmap" class="toc-item">10. Roadmap</a>
+                    <a href="#conclusion" class="toc-item">11. Conclusion</a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Whitepaper Content -->
+    <main class="whitepaper-content">
+        <div class="container">
+            <article class="paper">
+                <!-- Abstract -->
+                <section id="abstract" class="paper-section">
+                    <h2 class="section-number">1.</h2>
+                    <h2 class="paper-heading">Abstract</h2>
+                    <p class="paper-text">
+                        TokenTeller is an advanced AI-powered cryptocurrency token analysis service that combines 
+                        real-time decentralized exchange (DEX) data with sophisticated artificial intelligence to 
+                        provide comprehensive, actionable insights for cryptocurrency investors and traders. By 
+                        leveraging the Virtuals Protocol's Agent Coordination Protocol (ACP), TokenTeller delivers 
+                        decentralized, reliable, and intelligent token analysis services.
+                    </p>
+                    <p class="paper-text">
+                        This whitepaper outlines the technical architecture, analysis framework, and implementation 
+                        details of TokenTeller, demonstrating how it addresses critical challenges in cryptocurrency 
+                        token evaluation and decision-making.
+                    </p>
+                </section>
+
+                <!-- Introduction -->
+                <section id="introduction" class="paper-section">
+                    <h2 class="section-number">2.</h2>
+                    <h2 class="paper-heading">Introduction</h2>
+                    <p class="paper-text">
+                        The cryptocurrency market operates 24/7 with thousands of tokens being created and traded 
+                        across numerous decentralized exchanges. This creates an overwhelming amount of data that 
+                        individual investors struggle to process effectively. Traditional analysis methods are either 
+                        too slow, too expensive, or lack the comprehensive approach needed for informed decision-making.
+                    </p>
+                    <p class="paper-text">
+                        TokenTeller emerged from the need for an intelligent, automated, and accessible solution that 
+                        can process vast amounts of market data, identify patterns, assess risks, and provide clear 
+                        recommendations in real-time. By combining cutting-edge AI technology with blockchain data 
+                        aggregation, TokenTeller democratizes access to sophisticated market analysis.
+                    </p>
+                </section>
+
+                <!-- The Problem -->
+                <section id="problem" class="paper-section">
+                    <h2 class="section-number">3.</h2>
+                    <h2 class="paper-heading">The Problem</h2>
+                    
+                    <h3 class="paper-subheading">3.1 Information Overload</h3>
+                    <p class="paper-text">
+                        Cryptocurrency traders face an overwhelming volume of data from multiple sources. Each token 
+                        can trade on dozens of pairs across various DEXs, with constantly changing metrics including 
+                        price, liquidity, volume, and market sentiment.
+                    </p>
+
+                    <h3 class="paper-subheading">3.2 Analysis Complexity</h3>
+                    <p class="paper-text">
+                        Effective token analysis requires expertise in multiple domains: technical analysis, fundamental 
+                        analysis, market psychology, and risk assessment. Few individual investors possess all these 
+                        skills or have the time to apply them consistently.
+                    </p>
+
+                    <h3 class="paper-subheading">3.3 Real-Time Requirements</h3>
+                    <p class="paper-text">
+                        Cryptocurrency markets move rapidly. Analysis that takes hours to produce may be obsolete by 
+                        the time it's complete. Investors need instant, accurate insights to make timely decisions.
+                    </p>
+
+                    <h3 class="paper-subheading">3.4 Trust and Centralization</h3>
+                    <p class="paper-text">
+                        Many existing analysis services are centralized, creating single points of failure and potential 
+                        conflicts of interest. Users need to trust that the analysis is objective and not manipulated 
+                        for the service provider's benefit.
+                    </p>
+                </section>
+
+                <!-- Our Solution -->
+                <section id="solution" class="paper-section">
+                    <h2 class="section-number">4.</h2>
+                    <h2 class="paper-heading">Our Solution</h2>
+                    
+                    <p class="paper-text">
+                        TokenTeller addresses these challenges through a comprehensive, AI-powered analysis framework 
+                        built on decentralized infrastructure:
+                    </p>
+
+                    <div class="solution-grid">
+                        <div class="solution-item">
+                            <div class="solution-icon">🤖</div>
+                            <h4 class="solution-title">AI-Powered Intelligence</h4>
+                            <p class="solution-description">
+                                Advanced GPT-4 models process and analyze market data with human-level comprehension, 
+                                identifying patterns and insights that traditional algorithms miss.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <div class="solution-icon">⚡</div>
+                            <h4 class="solution-title">Real-Time Analysis</h4>
+                            <p class="solution-description">
+                                Direct integration with DexScreener API provides up-to-the-second market data, 
+                                ensuring analysis is always current and relevant.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <div class="solution-icon">🔒</div>
+                            <h4 class="solution-title">Decentralized Service</h4>
+                            <p class="solution-description">
+                                Built on Virtuals Protocol ACP for trustless, decentralized service delivery without 
+                                centralized intermediaries.
+                            </p>
+                        </div>
+                        <div class="solution-item">
+                            <div class="solution-icon">📊</div>
+                            <h4 class="solution-title">Comprehensive Framework</h4>
+                            <p class="solution-description">
+                                Multi-dimensional analysis covering sentiment, technical metrics, liquidity, volume, 
+                                risk assessment, and investment outlook.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technical Architecture -->
+                <section id="architecture" class="paper-section">
+                    <h2 class="section-number">5.</h2>
+                    <h2 class="paper-heading">Technical Architecture</h2>
+                    
+                    <h3 class="paper-subheading">5.1 System Overview</h3>
+                    <p class="paper-text">
+                        TokenTeller consists of three primary layers: the Data Aggregation Layer, the AI Analysis 
+                        Layer, and the Service Coordination Layer.
+                    </p>
+
+                    <div class="architecture-diagram">
+                        <div class="arch-layer">
+                            <h4 class="arch-layer-title">Service Coordination Layer</h4>
+                            <p class="arch-layer-desc">Virtuals Protocol ACP • Job Management • Payment Processing</p>
+                        </div>
+                        <div class="arch-arrow">↓</div>
+                        <div class="arch-layer">
+                            <h4 class="arch-layer-title">AI Analysis Layer</h4>
+                            <p class="arch-layer-desc">OpenAI GPT-4 • Sentiment Analysis • Risk Assessment</p>
+                        </div>
+                        <div class="arch-arrow">↓</div>
+                        <div class="arch-layer">
+                            <h4 class="arch-layer-title">Data Aggregation Layer</h4>
+                            <p class="arch-layer-desc">DexScreener API • Market Data • Liquidity Metrics</p>
+                        </div>
+                    </div>
+
+                    <h3 class="paper-subheading">5.2 Data Aggregation Layer</h3>
+                    <p class="paper-text">
+                        The foundation of TokenTeller is robust data collection from DexScreener, providing:
+                    </p>
+                    <ul class="paper-list">
+                        <li>Real-time price data across all trading pairs</li>
+                        <li>Liquidity metrics (USD value, base/quote token amounts)</li>
+                        <li>Volume data (24h, 6h, 1h time windows)</li>
+                        <li>Price change percentages across multiple timeframes</li>
+                        <li>Market capitalization and fully diluted valuation</li>
+                        <li>Trading pair information and DEX identification</li>
+                    </ul>
+
+                    <h3 class="paper-subheading">5.3 AI Analysis Layer</h3>
+                    <p class="paper-text">
+                        The AI layer processes raw market data through sophisticated language models to generate:
+                    </p>
+                    <ul class="paper-list">
+                        <li><strong>Sentiment Analysis:</strong> Market outlook classification (Bullish, Bearish, Neutral) with confidence scores</li>
+                        <li><strong>Technical Assessment:</strong> Liquidity status, risk levels, volume analysis, and price action evaluation</li>
+                        <li><strong>Key Factors:</strong> Identification of primary drivers affecting token performance</li>
+                        <li><strong>Recommendations:</strong> Actionable advice for investors based on analysis</li>
+                        <li><strong>Warnings:</strong> Risk indicators and cautionary insights</li>
+                        <li><strong>Investment Outlook:</strong> Summary assessment of investment potential</li>
+                    </ul>
+
+                    <h3 class="paper-subheading">5.4 Service Coordination Layer</h3>
+                    <p class="paper-text">
+                        TokenTeller operates as a decentralized service on the Virtuals Protocol, handling:
+                    </p>
+                    <ul class="paper-list">
+                        <li>Job request validation and acceptance</li>
+                        <li>Analysis execution and result delivery</li>
+                        <li>Payment processing and evaluation</li>
+                        <li>Service reputation and quality tracking</li>
+                    </ul>
+                </section>
+
+                <!-- Analysis Framework -->
+                <section id="analysis" class="paper-section">
+                    <h2 class="section-number">6.</h2>
+                    <h2 class="paper-heading">Analysis Framework</h2>
+                    
+                    <h3 class="paper-subheading">6.1 Multi-Dimensional Assessment</h3>
+                    <p class="paper-text">
+                        TokenTeller employs a comprehensive, multi-dimensional analysis approach that evaluates tokens 
+                        across several critical dimensions:
+                    </p>
+
+                    <div class="framework-grid">
+                        <div class="framework-item">
+                            <h4 class="framework-title">💭 Sentiment Dimension</h4>
+                            <p class="framework-text">
+                                Analyzes market psychology, trend momentum, and overall market attitude toward the 
+                                token. Provides classification (Bullish/Bearish/Neutral) with confidence scores and 
+                                detailed reasoning.
+                            </p>
+                        </div>
+                        <div class="framework-item">
+                            <h4 class="framework-title">🔧 Technical Dimension</h4>
+                            <p class="framework-text">
+                                Evaluates liquidity adequacy, trading volume patterns, price action characteristics, 
+                                and volatility metrics to assess market health and trading conditions.
+                            </p>
+                        </div>
+                        <div class="framework-item">
+                            <h4 class="framework-title">⚖️ Risk Dimension</h4>
+                            <p class="framework-text">
+                                Assesses investment risk through liquidity depth, volume consistency, market cap 
+                                sustainability, and vulnerability indicators.
+                            </p>
+                        </div>
+                        <div class="framework-item">
+                            <h4 class="framework-title">📈 Market Position</h4>
+                            <p class="framework-text">
+                                Evaluates competitive standing, market penetration, liquidity across exchanges, and 
+                                overall market presence.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 class="paper-subheading">6.2 Analysis Workflow</h3>
+                    <p class="paper-text">The analysis process follows a systematic workflow:</p>
+                    <ol class="paper-ordered-list">
+                        <li><strong>Token Address Validation:</strong> Verify the contract address format and accessibility</li>
+                        <li><strong>Data Retrieval:</strong> Fetch comprehensive market data from DexScreener</li>
+                        <li><strong>Liquidity Prioritization:</strong> Identify and focus on the most liquid trading pair</li>
+                        <li><strong>Multi-Pair Analysis:</strong> Evaluate all trading pairs above minimum liquidity thresholds</li>
+                        <li><strong>AI Processing:</strong> Submit data to GPT-4 for intelligent analysis</li>
+                        <li><strong>Report Generation:</strong> Compile comprehensive analysis report with all findings</li>
+                        <li><strong>Delivery:</strong> Return formatted report to the requesting agent</li>
+                    </ol>
+                </section>
+
+                <!-- AI Integration -->
+                <section id="ai" class="paper-section">
+                    <h2 class="section-number">7.</h2>
+                    <h2 class="paper-heading">AI Integration</h2>
+                    
+                    <h3 class="paper-subheading">7.1 Model Selection</h3>
+                    <p class="paper-text">
+                        TokenTeller utilizes OpenAI's GPT-4-mini model, optimized for cost-effectiveness while 
+                        maintaining high-quality analysis. The model is configured with:
+                    </p>
+                    <ul class="paper-list">
+                        <li>Temperature: 0.3 (for consistent, factual analysis)</li>
+                        <li>Max tokens: 1500 (sufficient for comprehensive reports)</li>
+                        <li>Structured output format for reliable parsing</li>
+                    </ul>
+
+                    <h3 class="paper-subheading">7.2 Prompt Engineering</h3>
+                    <p class="paper-text">
+                        Carefully crafted prompts guide the AI to provide consistent, high-quality analysis. The 
+                        prompt structure includes:
+                    </p>
+                    <ul class="paper-list">
+                        <li>Role definition (cryptocurrency market analyst)</li>
+                        <li>Context provision (comprehensive market data)</li>
+                        <li>Task specification (detailed analysis requirements)</li>
+                        <li>Output format (structured JSON response)</li>
+                        <li>Quality guidelines (objectivity, evidence-based reasoning)</li>
+                    </ul>
+
+                    <h3 class="paper-subheading">7.3 Response Processing</h3>
+                    <p class="paper-text">
+                        AI responses are validated and structured through:
+                    </p>
+                    <ul class="paper-list">
+                        <li>Schema validation using Zod</li>
+                        <li>Confidence score verification</li>
+                        <li>Sentiment classification normalization</li>
+                        <li>Error handling and retry logic</li>
+                    </ul>
+                </section>
+
+                <!-- Protocol Integration -->
+                <section id="protocol" class="paper-section">
+                    <h2 class="section-number">8.</h2>
+                    <h2 class="paper-heading">Virtuals Protocol Integration</h2>
+                    
+                    <h3 class="paper-subheading">8.1 Agent Coordination Protocol (ACP)</h3>
+                    <p class="paper-text">
+                        TokenTeller operates as both a buyer and seller agent within the Virtuals Protocol ecosystem, 
+                        enabling decentralized service coordination without centralized intermediaries.
+                    </p>
+
+                    <h3 class="paper-subheading">8.2 Service Definition</h3>
+                    <p class="paper-text">
+                        TokenTeller offers a "Token Analysis" service with the following specification:
+                    </p>
+                    <ul class="paper-list">
+                        <li><strong>Input:</strong> Token contract address (validated ERC-20 address)</li>
+                        <li><strong>Output:</strong> Comprehensive analysis report with AI insights</li>
+                        <li><strong>Pricing:</strong> Dynamic pricing based on analysis depth</li>
+                        <li><strong>Delivery:</strong> Structured data delivery via ACP protocol</li>
+                    </ul>
+
+                    <h3 class="paper-subheading">8.3 Job Lifecycle</h3>
+                    <p class="paper-text">The ACP job lifecycle for TokenTeller analysis:</p>
+                    <ol class="paper-ordered-list">
+                        <li><strong>Request Phase:</strong> Client initiates job with token address</li>
+                        <li><strong>Validation Phase:</strong> TokenTeller validates address and accepts/rejects</li>
+                        <li><strong>Negotiation Phase:</strong> Price and delivery terms confirmed</li>
+                        <li><strong>Transaction Phase:</strong> Payment processed, analysis executed</li>
+                        <li><strong>Evaluation Phase:</strong> Results delivered, service evaluated</li>
+                        <li><strong>Completion Phase:</strong> Job finalized, reputation updated</li>
+                    </ol>
+
+                    <h3 class="paper-subheading">8.4 Quality Assurance</h3>
+                    <p class="paper-text">
+                        The protocol's built-in evaluation system ensures quality through:
+                    </p>
+                    <ul class="paper-list">
+                        <li>Client feedback and ratings</li>
+                        <li>Automated success metrics tracking</li>
+                        <li>Reputation-based service ranking</li>
+                        <li>Dispute resolution mechanisms</li>
+                    </ul>
+                </section>
+
+                <!-- Use Cases -->
+                <section id="use-cases" class="paper-section">
+                    <h2 class="section-number">9.</h2>
+                    <h2 class="paper-heading">Use Cases</h2>
+                    
+                    <h3 class="paper-subheading">9.1 Individual Traders</h3>
+                    <p class="paper-text">
+                        Retail traders can access professional-grade analysis instantly, helping them make informed 
+                        decisions about token investments without requiring extensive expertise or time commitment.
+                    </p>
+
+                    <h3 class="paper-subheading">9.2 Investment DAOs</h3>
+                    <p class="paper-text">
+                        Decentralized autonomous organizations can use TokenTeller for due diligence on potential 
+                        investments, providing objective analysis to support governance proposals.
+                    </p>
+
+                    <h3 class="paper-subheading">9.3 Portfolio Management</h3>
+                    <p class="paper-text">
+                        Automated portfolio managers and trading bots can integrate TokenTeller for continuous 
+                        monitoring and rebalancing decisions based on real-time analysis.
+                    </p>
+
+                    <h3 class="paper-subheading">9.4 Risk Management</h3>
+                    <p class="paper-text">
+                        DeFi protocols and lending platforms can utilize TokenTeller for collateral assessment and 
+                        risk evaluation of listed tokens.
+                    </p>
+
+                    <h3 class="paper-subheading">9.5 Market Research</h3>
+                    <p class="paper-text">
+                        Researchers and analysts can leverage TokenTeller for comprehensive market surveys and 
+                        comparative analysis across multiple tokens.
+                    </p>
+                </section>
+
+                <!-- Roadmap -->
+                <section id="roadmap" class="paper-section">
+                    <h2 class="section-number">10.</h2>
+                    <h2 class="paper-heading">Roadmap</h2>
+                    
+                    <div class="roadmap-timeline">
+                        <div class="roadmap-item">
+                            <div class="roadmap-phase">Phase 1: Foundation</div>
+                            <div class="roadmap-status completed">Completed</div>
+                            <ul class="roadmap-list">
+                                <li>Core analysis engine implementation</li>
+                                <li>DexScreener integration</li>
+                                <li>OpenAI integration</li>
+                                <li>Virtuals Protocol ACP integration</li>
+                                <li>Basic sentiment and technical analysis</li>
+                            </ul>
+                        </div>
+
+                        <div class="roadmap-item">
+                            <div class="roadmap-phase">Phase 2: Enhancement</div>
+                            <div class="roadmap-status in-progress">In Progress</div>
+                            <ul class="roadmap-list">
+                                <li>Multi-chain support (Ethereum, BSC, Polygon)</li>
+                                <li>Historical data analysis</li>
+                                <li>Comparative analysis features</li>
+                                <li>Advanced risk metrics</li>
+                                <li>API documentation and SDK</li>
+                            </ul>
+                        </div>
+
+                        <div class="roadmap-item">
+                            <div class="roadmap-phase">Phase 3: Intelligence</div>
+                            <div class="roadmap-status planned">Planned</div>
+                            <ul class="roadmap-list">
+                                <li>Machine learning model integration</li>
+                                <li>Predictive analytics</li>
+                                <li>On-chain data integration</li>
+                                <li>Social sentiment analysis</li>
+                                <li>Custom analysis templates</li>
+                            </ul>
+                        </div>
+
+                        <div class="roadmap-item">
+                            <div class="roadmap-phase">Phase 4: Ecosystem</div>
+                            <div class="roadmap-status planned">Planned</div>
+                            <ul class="roadmap-list">
+                                <li>TokenTeller DAO governance</li>
+                                <li>Community-driven improvements</li>
+                                <li>Third-party integrations</li>
+                                <li>Mobile applications</li>
+                                <li>Advanced visualization tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section id="conclusion" class="paper-section">
+                    <h2 class="section-number">11.</h2>
+                    <h2 class="paper-heading">Conclusion</h2>
+                    
+                    <p class="paper-text">
+                        TokenTeller represents a significant advancement in cryptocurrency token analysis, combining 
+                        the power of artificial intelligence with real-time blockchain data and decentralized service 
+                        coordination. By addressing the critical challenges of information overload, analysis 
+                        complexity, and real-time requirements, TokenTeller empowers investors and traders to make 
+                        informed decisions with confidence.
+                    </p>
+
+                    <p class="paper-text">
+                        The integration with Virtuals Protocol ensures that TokenTeller remains decentralized, 
+                        transparent, and trustworthy, aligning with the core principles of the blockchain ecosystem. 
+                        As we continue to enhance and expand TokenTeller's capabilities, our commitment remains 
+                        steadfast: to provide accessible, intelligent, and reliable token analysis for everyone.
+                    </p>
+
+                    <p class="paper-text">
+                        The future of cryptocurrency investment is intelligent, automated, and accessible. TokenTeller 
+                        is leading that future, one analysis at a time.
+                    </p>
+
+                    <div class="paper-signature">
+                        <p><strong>TokenTeller Team</strong></p>
+                        <p>November 2025</p>
+                    </div>
+                </section>
+
+                <!-- References -->
+                <section class="paper-section references">
+                    <h2 class="paper-heading">References</h2>
+                    <ol class="references-list">
+                        <li>Virtuals Protocol Documentation. "Agent Coordination Protocol (ACP)". 2025.</li>
+                        <li>DexScreener. "API Documentation". https://dexscreener.com/</li>
+                        <li>OpenAI. "GPT-4 Technical Report". 2024.</li>
+                        <li>Ethereum Foundation. "ERC-20 Token Standard". 2015.</li>
+                        <li>Various Authors. "Decentralized Finance: A Survey". IEEE Access, 2024.</li>
+                    </ol>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container cta-container">
+            <h2 class="cta-title">Start Using TokenTeller Today</h2>
+            <p class="cta-description">
+                Experience the power of AI-driven token analysis
+            </p>
+            <a href="index.html" class="btn-primary btn-large">Go to Homepage</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="logo.png" alt="TokenTeller Eagle Logo" class="logo-img">
+                <span class="logo-text">TokenTeller</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="whitepaper.html">Whitepaper</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TokenTeller. Built with intelligence and precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
